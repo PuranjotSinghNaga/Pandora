@@ -9,9 +9,6 @@ const Page = () => {
     <main className="relative bg-black flex flex-col justify-center items-center h-screen w-full overflow-hidden">
       <div className="max-w-7xl w-full p-5">
         <Hero />
-        <About />
-        <ProdDesc />
-        <Meet />
       </div>
     </main>
   );
