@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrics Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #metricsChart {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="metricsChart"></canvas>
+
+<script>
+    // Define metrics as JavaScript variables
+    const cpu_usage = 90;  // Replace with actual data
+    const memory_usage = 75;  // Replace with actual data
+    const error_rate = 5;  // Replace with actual data
+    const traffic = 1200;  // Replace with actual data
+
+    // Get context for the chart
+    var ctx = document.getElementById('metricsChart').getContext('2d');
+
+    // Initialize the chart
+    var metricsChart = new Chart(ctx, {
+        type: 'bar',  // Bar chart
+        data: {
+            labels: ['CPU Usage', 'Memory Usage', 'Error Rate', 'Traffic'],  // Metric labels
+            datasets: [{
+                label: 'Metrics (%)',
+                data: [cpu_usage, memory_usage, error_rate, traffic],  // Use JavaScript variables
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',   // CPU Usage
+                    'rgba(54, 162, 235, 0.2)',   // Memory Usage
+                    'rgba(255, 206, 86, 0.2)',   // Error Rate
+                    'rgba(75, 192, 192, 0.2)'    // Traffic
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',     // CPU Usage border
+                    'rgba(54, 162, 235, 1)',     // Memory Usage border
+                    'rgba(255, 206, 86, 1)',     // Error Rate border
+                    'rgba(75, 192, 192, 1)'      // Traffic border
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,  // Start the y-axis at 0
+                    title: {
+                        display: true,
+                        text: 'Percentage'
+                    }
+                }
+            },
+            responsive: true,  // Make the chart responsive
+            plugins: {
+                legend: {
+                    position: 'top',  // Move the legend to the top
+                },
+                title: {
+                    display: true,
+                    text: 'System Metrics Dashboard'
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
