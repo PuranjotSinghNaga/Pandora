@@ -1,11 +1,15 @@
+const { nextui } = require('@nextui-org/theme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+    // Removed incorrect path to @nextui components
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,jsx}", // Dynamically include all files in nextui
   ],
   prefix: "",
   theme: {
@@ -66,11 +70,6 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-      },
-      animation: {
-        spotlight: "spotlight 2s ease .75s 1 forwards",
-      },
-      keyframes: {
         spotlight: {
           "0%": {
             opacity: 0,
@@ -82,9 +81,13 @@ module.exports = {
           },
         },
       },
+      animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+      },
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
+    require('tailwindcss-animate'), // Correct import for tailwindcss-animate
+    nextui(),
   ],
-}
+};
