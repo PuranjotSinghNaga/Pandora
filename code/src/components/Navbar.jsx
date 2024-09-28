@@ -6,7 +6,7 @@ export default function App() {
       <NavbarBrand>
         <p className="font-bold text-inherit">Pandora</p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      {/* <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#">
             Home
@@ -22,15 +22,13 @@ export default function App() {
           Meet the Team
           </Link>
         </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="/sign-in">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
+        <Link href="/sign-up">Sign Up</Link>
         </NavbarItem>
       </NavbarContent>
     </Navbar>
