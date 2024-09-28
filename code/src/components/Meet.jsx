@@ -4,19 +4,15 @@ export const Meet = () => {
   return (
     <div className="py-10">
       <h2 className="tracking-widest my-5 text-5xl font-extrabold text-center text-white">
-        MEET OUR TEAM:
+        OUR TEAM MEMBERS:
       </h2>
-      <h1 className="uppercase tracking-widest text-lg text-center text-white mb-2">
-        1) Puranjot Singh
-        <br />
-        2) Tanish Kackria
-        <br />
-        3) Pranav Malhotra
-        <br />
-        4) Devansh Aggarwal
-        <br />
-        5) Siddharth Chauhan
-      </h1>
+      <ul className="list-disc list-inside text-center text-lg text-white uppercase tracking-widest">
+        <li className="mb-2">Puranjot Singh</li>
+        <li className="mb-2">Tanish Kackria</li>
+        <li className="mb-2">Pranav Malhotra</li>
+        <li className="mb-2">Devansh Aggarwal</li>
+        <li>Siddharth Chauhan</li>
+      </ul>
     </div>
   );
 };
