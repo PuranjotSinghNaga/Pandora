@@ -80,9 +80,14 @@ module.exports = {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        }
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        move: "move 5s linear infinite",
       },
     },
   },
