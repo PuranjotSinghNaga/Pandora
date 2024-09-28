@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logger-hackathon-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logger-hackathon
+  template:
+    metadata:
+      labels:
+        app: logger-hackathon
+    spec:
+      containers:
+        - name: logger-hackathon-container
+          image: tjain598/logger-hackathon:latest
+          ports:
+            - containerPort: 8080

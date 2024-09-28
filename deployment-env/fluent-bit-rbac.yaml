@@ -24,4 +24,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: fluent-bit
-    namespace: kube-system
+    namespace: default
