@@ -30,13 +30,13 @@ const Hero = () => {
             </h2>
             <ProdDesc />
             <Meet/>
-            <a href="#about" className="mt-8">
+            {/* <a href="#about" className="mt-8">
               <MagicButton
                 title="About our Project"
                 icon={<RiArrowDropDownLine />}
                 position="right"
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
